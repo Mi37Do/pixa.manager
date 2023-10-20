@@ -1,0 +1,270 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/**/
+
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-deep: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #1d152d;
+  --vt-c-black-soft: #0e0818;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-text-slate: #334155;
+  --vt-c-text-slate-light: #f5f5f5;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-text-slate);
+  --vt-c-text-light-2: var(--vt-c-text-slate);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: var(--vt-c-text-slate-light);
+
+  --vt-c-app-background-light: #f4f9fd;
+  --vt-c-app-background-dark: #313338;
+
+  --vt-c-app-outline-light: #e2e8f0;
+  --vt-c-app-outline-dark: #3f4147;
+
+  --vt-c-nav-text-light: #577399;
+  --vt-c-nav-text-dark: #e0e7ff;
+
+  --vt-c-nav-text-hover-light: #6366f1;
+  --vt-c-nav-text-hover-dark: #e0e7ff;
+
+  --vt-c-deep-background-light: #fff;
+  --vt-c-deep-background-dark: #2b2d31;
+
+  --vt-c-flaot-btn-light: #fff;
+  --vt-c-flaot-btn-dark: #2313338;
+
+  --vt-c-input-light: #fff;
+  --vt-c-input-dark: #383a40;
+
+  --vt-c-flaot-btn-hover-light: #fff;
+  --vt-c-flaot-btn-hover-dark: #2b2d31;
+}
+
+/* semantic color variables for this project */
+
+/**/
+:root {
+  --color-background: var(--vt-c-app-background-light);
+  --color-background-deep: var(--vt-c-deep-background-light);
+  --color-outline: var(--vt-c-app-outline-light);
+  --color-nav-text: var(--vt-c-nav-text-light);
+  --color-nav-text-hover: var(--vt-c-nav-text-hover-light);
+  --color-btn-float: var(--vt-c-flaot-btn-light);
+  --color-btn-float-hover: var(--vt-c-flaot-btn-hover-light);
+  --color-deep-background: var(--vt-c-white);
+  --color-input: var(--vt-c-input-light);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+:root.dark-theme {
+  --color-background: var(--vt-c-app-background-dark);
+  --color-background-deep: var(--vt-c-deep-background-dark);
+  --color-nav-text: var(--vt-c-nav-text-dark);
+  --color-outline: var(--vt-c-app-outline-dark);
+  --color-nav-text-hover: var(--vt-c-nav-text-hover-dark);
+  --color-btn-float: var(--vt-c-flaot-btn-dark);
+  --color-btn-float-hover: var(--vt-c-flaot-btn-hover-dark);
+  --color-input: var(--vt-c-input-dark);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "cairo";
+  src: url("@/assets/fonts/Cairo.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-family: cairo;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.sideMenu {
+  color: var(--color-text);
+  background-color: var(--color-background-deep);
+}
+
+.nav-menu,
+.nav-element {
+  color: var(--color-nav-text);
+  fill: var(--color-nav-text);
+  background-color: transparent;
+  border: 0px;
+}
+
+.nav-element:hover {
+  color: var(--color-nav-text-hover);
+  fill: var(--color-nav-text-hover);
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.btn {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.15rem;
+}
+
+.pixa-card {
+  background-color: var(--color-background-deep);
+  border-width: 1px;
+  border-color: var(--color-outline);
+  border-radius: 0.8rem;
+}
+
+.pixa-title {
+  font-size: large;
+  font-weight: 700;
+  color: var(--color-nav-text-hover);
+}
+.text-tag {
+  font-size: 0.86rem;
+}
+
+.pixa-input {
+  display: block;
+  border-width: 1px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  font-size: small;
+  border-color: var(--color-outline);
+  background-color: var(--color-input);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2);
+}
+
+.pixa-input:focus {
+  display: block;
+  border-width: 1px;
+  border-color: #6366f1;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2);
+}
+
+.pixa-btn-float {
+  background-color: var(--color-btn-float);
+  border-width: 1px;
+  fill: var(--color-nav-text);
+  border-color: var(--color-outline);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+.pixa-btn-float:hover {
+  background-color: var(--color-btn-float-hover);
+  fill: var(--color-nav-text-hover);
+  border-width: 1px;
+  border-color: var(--color-nav-text-hover);
+}
+
+.btn-primary {
+  color: #fff;
+  fill: #fff;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+.btn-sm {
+  border-radius: 0.45rem;
+}
+
+.pixa-btn {
+  height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.pixa-border {
+  border-color: var(--color-outline);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-color: white;
+  border-width: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+.btn-disabled {
+  color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.page-header {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 80%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
